@@ -19,3 +19,6 @@ ReactDOM.render(
   />,
   document.querySelector("#root")
 );
+
+
+export default MediaCard;

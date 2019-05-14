@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import MediaCard from './mediaCard';
+import Gate from './gate';
 
 function Hi() {
   return (
@@ -35,8 +36,8 @@ const Func4 = props => <div>Func4 {props.name}</div>;
   );
 }*/
 
-const Gate = props => <div>{props.isOpen ? "Open" : "Closed"}</div>;
+//const Gate = props => <div>{props.isOpen ? "Open" : "Closed"}</div>;
 
 //ReactDOM.render(<Func4 name="Payam"/>, document.querySelector("#root"));
-ReactDOM.render(<MediaCard title="media card" body={<b>Test Body</b>} imageUrl="http://www.google.com"/>, document.querySelector("#root"));
-//ReactDOM.render(<Gate isOpen={false} />, document.querySelector("#root"));
+//ReactDOM.render(<MediaCard title="media card" body={<b>Test Body</b>} imageUrl="http://www.google.com"/>, document.querySelector("#root"));
+ReactDOM.render(<Gate isOpen={false} />, document.querySelector("#root"));

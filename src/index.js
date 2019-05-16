@@ -1,15 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
-import { object } from "prop-types";
 
 class Reddit extends React.Component {
   state = {
-    posts: []
+  posts: []
   };
 
   componentDidMount() {
-    axios.get(`https://wwww.reddit.com/r/reactjs.json`).then(res => {
+    axios.get('https://www.reddit.com/r/reactjs.json').then(res => {
       const posts = res.data.data.children.map(obj => obj.data);
       this.setState({ posts });
     });
@@ -20,9 +19,9 @@ class Reddit extends React.Component {
       <div>
         <h1>/r/reactjs</h1>
         <ul>
-          {this.state.posts.map(post => (
-            <li key={post.id}>{post.title}</li>
-          ))}
+          {this.state.posts.map(post => {
+            return <li key={post.id}>{post.title} | {post.score}</li>;
+          })}
         </ul>
       </div>
     );
